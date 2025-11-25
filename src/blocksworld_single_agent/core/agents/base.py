@@ -369,7 +369,7 @@ class AgentInterface(ABC):
         self._setup_interrupt_handler()
         
         try:
-            config = {"configurable": {"thread_id": thread_id or "1"}, "recursion_limit": 200}
+            config = {"configurable": {"thread_id": thread_id or "1"}, "recursion_limit": 100}
             text_chunks = []
             structured_response = None
             

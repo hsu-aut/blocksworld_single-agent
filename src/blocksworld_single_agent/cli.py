@@ -60,10 +60,13 @@ async def test_agent(model_name: str = "gpt-4o-mini", temperature: float = 0.1, 
                 user_prompt= agent._get_default_system_prompt() + "\n "+ "User Input:"+ user_input
                 
                 # Send message and stream response with tool event handling
-                await _stream_agent_response(agent, user_prompt)
+                await asyncio.wait_for(_stream_agent_response(agent, user_prompt), timeout=600)
                 
             except KeyboardInterrupt:
                 print("\n👋 Interrupted by user")
+                break
+            except asyncio.TimeoutError:
+                print("⚠️ Streaming response timed out!")
                 break
             except Exception as e:
                 print(f"\n❌ Error: {e}")
