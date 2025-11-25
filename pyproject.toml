@@ -1,0 +1,31 @@
+[project]
+name = "blocksworld_single_agent"
+version = "0.1.0"
+description = "Single-Agent framework with LangChain and MCP integration for planning, verification and execution of blocksworld planning problem."
+authors = [
+    { name = "Jayanth Somashekaraiah", email = "jayanth.somashekaraiah@hsu-hh.de" },
+    { name = "Niklas Jobs", email = "niklas.jobs@hsu-hh.de" },
+    { name = "Maximilian Weigand", email = "maximilian.weigand@hsu-hh.de" },
+    { name = "Luis Miguel Vieira da Silva", email = "miguel.vieira@hsu-hh.de" }
+]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "blocksworld_single_agent", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.13,<4.0"
+mcp = "^1.12.3"
+langchain-mcp-adapters = "^0.1.9"
+langgraph = "^0.6.2"
+langchain-openai = "^0.3.28"
+langchain-community = "^0.3.27"
+langchain-google-genai = "^2.1.8"
+langchain-anthropic = "^0.3.0"
+langchain = "^0.3.27"
+python-dotenv = "^1.0.0"
+fastapi = "^0.115.0"
+uvicorn = {extras = ["standard"], version = "^0.32.0"}
+streamlit = "^1.41.0"
+
+[tool.poetry.scripts]
+llm-cli = "blocksworld_single_agent.cli:main"
