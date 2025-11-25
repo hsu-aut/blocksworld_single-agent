@@ -10,7 +10,7 @@ authors = [
 ]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "blocksworld_single-agent", from = "src"}]
+packages = [{include = "blocksworld_single_agent", from = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.13,<4.0"
@@ -28,4 +28,4 @@ uvicorn = {extras = ["standard"], version = "^0.32.0"}
 streamlit = "^1.41.0"
 
 [tool.poetry.scripts]
-llm-cli = "blocksworld_single-agent.cli:main"
+llm-cli = "blocksworld_single_agent.cli:main"
