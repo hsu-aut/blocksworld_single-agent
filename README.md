@@ -147,7 +147,7 @@ The client supports multiple LLM providers with extensive model options:
 
 ### Simple Agent Usage
 ```python
-from llmstudy_mcp_client.core.agents import ReActAgent
+from blocksworld_single_agent.core.agents import ReActAgent
 
 # Create and initialize agent
 agent = ReActAgent("gpt-4o-mini", temperature=0.1)
@@ -163,8 +163,8 @@ await agent.close()
 
 ### Agent with Tool Filtering
 ```python
-from llmstudy_mcp_client.core.agents import ReActAgent
-from llmstudy_mcp_client.core.agents.base import AgentConfig
+from blocksworld_single_agent.core.agents import ReActAgent
+from blocksworld_single_agent.core.agents.base import AgentConfig
 
 # Create agent with specific tool access
 config = AgentConfig(
