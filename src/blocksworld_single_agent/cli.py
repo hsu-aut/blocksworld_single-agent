@@ -3,9 +3,9 @@ import argparse
 import sys
 from typing import Optional
 
-from llmstudy_mcp_client.core import ReActAgent, AVAILABLE_MODELS, MODELS_BY_PROVIDER_AND_SERIES, MultiAgentPlanningGraph
-from llmstudy_mcp_client.core.mcp import MCPManager
-from llmstudy_mcp_client.core.tool_events import parse_tool_event, ToolStartEvent, ToolEndEvent, ToolErrorEvent
+from blocksworld_single_agent.core import ReActAgent, AVAILABLE_MODELS, MODELS_BY_PROVIDER_AND_SERIES
+from blocksworld_single_agent.core.mcp import MCPManager
+from blocksworld_single_agent.core.tool_events import parse_tool_event, ToolStartEvent, ToolEndEvent, ToolErrorEvent
 
 
 async def test_agent(model_name: str = "gpt-4o-mini", temperature: float = 0.1, execution_type: str = "react"):
